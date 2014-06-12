@@ -12,25 +12,44 @@
 	<ui:include src="/fragments/MainHeader.xhtml"></ui:include>
 	<ui:include src="/fragments/ProgressStatus.xhtml"></ui:include>
 	<h1>This is the registration page</h1>
-	<h:panelGroup id="basic_info_block">
-		<h:inputText id="basic_campus"></h:inputText>
-		<h:inputText id="basic_first_name"></h:inputText>
-		<h:inputText id="basic_last_name"></h:inputText>
-		<h:inputText id="basic_dob"></h:inputText>
-		<h:inputText id="basic_city_birth"></h:inputText>
-		<h:selectOneMenu id="basic_state_birth"></h:selectOneMenu>
-		<h:selectOneMenu id="basic_country_birth"></h:selectOneMenu>
-		<h:selectOneMenu id="basic_religion"></h:selectOneMenu>
-		<h:selectOneRadio id="basic_physically_disabled"></h:selectOneRadio>
-		<h:selectOneRadio id="basic_gender"></h:selectOneRadio>
-		<h:selectOneRadio id="basic_mother_tongue"></h:selectOneRadio>
+	<h:form id="registrationFirstForm">
+		<h:panelGroup id="basic_info_block">
+		<h:inputText id="basic_first_name" value="#{mpb_registrationBasic.firstName}"></h:inputText>
+		<h:inputText id="basic_last_name" value="#{mpb_registrationBasic.lastName}"></h:inputText>
+		<h:inputText id="basic_dob" value="#{mpb_registrationBasic.dateOfBirth}"></h:inputText>
+		<h:selectOneMenu id="basic_country_birth" value="#{mpb_registrationBasic.birthCountry}">
+			<f:selectItems value="#{mpb_registrationBasic.listOfCountry}"></f:selectItems>
+		</h:selectOneMenu>
+		<h:selectOneMenu id="basic_state_birth" value="#{mpb_registrationBasic.birthState}">
+			<f:selectItems value="#{mpb_registrationBasic.listOfState}"></f:selectItems>
+		</h:selectOneMenu>
+		<h:selectOneMenu id="basic_city_birth" value="#{mpb_registrationBasic.birthCity}">
+			<f:selectItems value="#{mpb_registrationBasic.listOfCity}"></f:selectItems>
+		</h:selectOneMenu>
+		<h:selectOneMenu id="basic_religion" value="#{mpb_registrationBasic.religion}">
+			<f:selectItems value="#{mpb_registrationBasic.listOfReligion}"></f:selectItems>
+		</h:selectOneMenu>
+		<h:selectOneRadio id="basic_physically_disabled" value="#{mpb_registrationBasic.physicallyDisabled}"></h:selectOneRadio>
+		<h:selectOneRadio id="basic_gender" value="#{mpb_registrationBasic.gender}"></h:selectOneRadio>
+		<h:selectOneMenu id="basic_mother_tongue" value="#{mpb_registrationBasic.motherTongue}">
+			<f:selectItems value="#{mpb_registrationBasic.listOfLanguages}"></f:selectItems>
+		</h:selectOneMenu>
 	</h:panelGroup>
 	<h:panelGroup id="current_school_info_block">
-		<h:inputText id="current_school_student_standard"></h:inputText>
-		<h:inputText id="current_school_name"></h:inputText>
-		<h:inputText id="current_school_affiliated_board"></h:inputText>
-		<h:inputText id="current_school_city"></h:inputText>
-		<h:inputText id="current_school_state"></h:inputText>
+	<h:inputText id="current_school_name"></h:inputText>
+		<h:selectOneMenu id="current_school_student_standard" value="#{mpb_registrationBasic.currentStandard}">
+			<f:selectItems value="#{mpb_registrationBasic.listOfStandard}"></f:selectItems>
+		</h:selectOneMenu>
+		<h:selectOneMenu id="current_school_affiliated_board" value="#{mpb_registrationBasic.currentSchoolboard}">
+			<f:selectItems value="#{mpb_registrationBasic.listOfBoard}"></f:selectItems>
+		</h:selectOneMenu>
+		<h:selectOneMenu id="current_school_state" value="#{mpb_registrationBasic.currentSchoolState}">
+			<f:selectItems value="#{mpb_registrationBasic.listOfState}"></f:selectItems>
+		</h:selectOneMenu>
+		<h:selectOneMenu id="current_school_city" value="#{mpb_registrationBasic.currentSchoolCity}">
+			<f:selectItems value="#{mpb_registrationBasic.listOfCity}"></f:selectItems>
+		</h:selectOneMenu>
 	</h:panelGroup>
+	</h:form>
 </h:body>
 </html>
