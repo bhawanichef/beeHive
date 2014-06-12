@@ -4,6 +4,11 @@
   <welcome-file-list>
     <welcome-file>faces/student/Registration.xhtml</welcome-file>
   </welcome-file-list>
+  <context-param>
+  	<description>javax.faces.PROJECT_STAGE</description>
+  	<param-name>javax.faces.PROJECT_STAGE</param-name>
+  	<param-value>Development</param-value>
+  </context-param>
   <servlet>
     <servlet-name>Faces Servlet</servlet-name>
     <servlet-class>javax.faces.webapp.FacesServlet</servlet-class>

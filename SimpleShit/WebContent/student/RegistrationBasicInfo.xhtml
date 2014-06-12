@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://xmlns.jcp.org/jsf/html"
+	xmlns:f="http://xmlns.jcp.org/jsf/core"
+	xmlns:ui="http://xmlns.jcp.org/jsf/facelets">
+<h:head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+<title>Student registration form</title>
+</h:head>
+<h:body>
+	<ui:include src="/fragments/MainHeader.xhtml"></ui:include>
+	<ui:include src="/fragments/ProgressStatus.xhtml"></ui:include>
+	<h1>This is the registration page</h1>
+	<h:panelGroup id="basic_info_block">
+		<h:inputText id="basic_campus"></h:inputText>
+		<h:inputText id="basic_first_name"></h:inputText>
+		<h:inputText id="basic_last_name"></h:inputText>
+		<h:inputText id="basic_dob"></h:inputText>
+		<h:inputText id="basic_city_birth"></h:inputText>
+		<h:selectOneMenu id="basic_state_birth"></h:selectOneMenu>
+		<h:selectOneMenu id="basic_country_birth"></h:selectOneMenu>
+		<h:selectOneMenu id="basic_religion"></h:selectOneMenu>
+		<h:selectOneRadio id="basic_physically_disabled"></h:selectOneRadio>
+		<h:selectOneRadio id="basic_gender"></h:selectOneRadio>
+		<h:selectOneRadio id="basic_mother_tongue"></h:selectOneRadio>
+	</h:panelGroup>
+	<h:panelGroup id="current_school_info_block">
+		<h:inputText id="current_school_student_standard"></h:inputText>
+		<h:inputText id="current_school_name"></h:inputText>
+		<h:inputText id="current_school_affiliated_board"></h:inputText>
+		<h:inputText id="current_school_city"></h:inputText>
+		<h:inputText id="current_school_state"></h:inputText>
+	</h:panelGroup>
+</h:body>
+</html>
