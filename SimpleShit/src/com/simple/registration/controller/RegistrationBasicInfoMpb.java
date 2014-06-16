@@ -41,6 +41,9 @@ public class RegistrationBasicInfoMpb {
 	private ArrayList<Integer> listOfStandard;
 	private ArrayList<String> listOfReligion;
 	
+	public RegistrationBasicInfoMpb() {
+		
+	}
 	/**
 	 * @return the firstName
 	 */
