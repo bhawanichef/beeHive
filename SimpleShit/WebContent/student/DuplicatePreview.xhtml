@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://xmlns.jcp.org/jsf/html"
+	xmlns:f="http://xmlns.jcp.org/jsf/core"
+	xmlns:ui="http://xmlns.jcp.org/jsf/facelets">
+<h:head>
+	<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+	<title>Preview Student registration form</title>
+</h:head>
+<h:body>
+	<ui:include src="/fragments/MainHeader.xhtml"></ui:include>
+	<ui:include src="/fragments/ProgressStatus.xhtml"></ui:include>
+	<h1>This is the duplicate preview registration page</h1>
+			<h:outputLabel id="label_preview_first_name" for="preview_first_name" value="First Name:"></h:outputLabel>
+		<h:outputText id="preview_first_name" value="#{mpb_registrationBasic.firstName}"></h:outputText><br></br>
+		<h:outputLabel id="label_preview_name" for="preview_last_name" value="Last name:"></h:outputLabel>
+		<h:outputText id="preview_last_name" value="#{mpb_registrationBasic.lastName}"></h:outputText><br></br>
+		<h:outputLabel id="label_preview_dob" for="preview_dob" value="Date of birth:"></h:outputLabel>
+		<h:outputText id="preview_dob" value="#{mpb_registrationBasic.dateOfBirth}"></h:outputText><br></br>
+		<h:outputLabel id="label_preview_birth_country" for="preview_birth_country" value="Country of birth:"></h:outputLabel>
+		<h:outputText id="preview_birth_country" value="#{mpb_registrationBasic.birthCountry}"></h:outputText><br></br>
+</h:body>
+</html>

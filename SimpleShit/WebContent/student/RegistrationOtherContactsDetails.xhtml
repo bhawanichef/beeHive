@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://xmlns.jcp.org/jsf/html"
+	xmlns:f="http://xmlns.jcp.org/jsf/core"
+	xmlns:ui="http://xmlns.jcp.org/jsf/facelets">
+<h:head>
+	<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+	<title>Student registration other contacts page</title>
+</h:head>
+<h:body>
+	<ui:include src="/fragments/MainHeader.xhtml"></ui:include>
+	<ui:include src="/fragments/ProgressStatus.xhtml"></ui:include>
+	<h1>This is the capture contact page</h1>
+	<h:form id="emergency_contacts_other_info_form">
+		<h:panelGroup id="emrgency_contact_block">
+			<h:panelGroup id="emergency_contact_one">
+				<h3>Emergency contact details 1 :</h3>
+				<h:outputLabel id="label_contact_one_name" for="contact_one_name"
+					value="Name:"></h:outputLabel>
+				<h:inputText id="contact_one_name"
+					value="#{mpb_registrationOtherContacts.emergencyContactOneName}"></h:inputText>
+				<br></br>
+				<h:outputLabel id="label_contact_one_relationship"
+					for="contact_one_relationship" value="Relationship to student:"></h:outputLabel>
+				<h:selectOneMenu id="contact_one_relationship"
+					value="#{mpb_registrationOtherContacts.emergencyContactOneRelationship}">
+					<f:selectItems
+						value="#{mpb_registrationOtherContacts.listOfRelationship}"></f:selectItems>
+				</h:selectOneMenu>
+				<br></br>
+				<h:outputLabel id="label_contact_one_phone" for="contact_one_phone"
+					value="Phone number:"></h:outputLabel>
+				<h:inputText id="contact_one_phone"
+					value="#{mpb_registrationOtherContacts.emergencyContactOnePhoneNumer}"></h:inputText>
+				<br></br>
+				<h:outputLabel id="label_contact_one_phone_type"
+					for="contact_one_phone_type" value="Phone type:"></h:outputLabel>
+				<h:selectOneMenu id="contact_one_phone_type"
+					value="#{mpb_registrationOtherContacts.emergencyContactOnePhoneType}">
+					<f:selectItems
+						value="#{mpb_registrationOtherContacts.listOfPhoneType}"></f:selectItems>
+				</h:selectOneMenu>
+				<br></br>
+			</h:panelGroup>
+			<h:panelGroup id="emergency_contact_two">
+				<h3>Emergency contact details 2 :</h3>
+				<h:outputLabel id="label_contact_two_name" for="contact_two_name"
+					value="Name:"></h:outputLabel>
+				<h:inputText id="contact_two_name"
+					value="#{mpb_registrationOtherContacts.emergencyContactTwoName}"></h:inputText>
+				<br></br>
+				<h:outputLabel id="label_contact_two_relationship"
+					for="contact_two_relationship" value="Relationship to student:"></h:outputLabel>
+				<h:selectOneMenu id="contact_two_relationship"
+					value="#{mpb_registrationOtherContacts.emergencyContactTwoRelationship}">
+					<f:selectItems
+						value="#{mpb_registrationOtherContacts.listOfRelationship}"></f:selectItems>
+				</h:selectOneMenu>
+				<br></br>
+				<h:outputLabel id="label_contact_two_phone" for="contact_two_phone"
+					value="Phone number:"></h:outputLabel>
+				<h:inputText id="contact_two_phone"
+					value="#{mpb_registrationOtherContacts.emergencyContactTwoPhoneNumer}"></h:inputText>
+				<br></br>
+				<h:outputLabel id="label_contact_two_phone_type"
+					for="contact_two_phone_type" value="Phone type:"></h:outputLabel>
+				<h:selectOneMenu id="contact_two_phone_type"
+					value="#{mpb_registrationOtherContacts.emergencyContactTwoPhoneType}">
+					<f:selectItems
+						value="#{mpb_registrationOtherContacts.listOfPhoneType}"></f:selectItems>
+				</h:selectOneMenu>
+				<br></br>
+			</h:panelGroup>
+			<h:panelGroup id="health_insurance_info_block">
+				<h3>Health insurance details</h3>
+				<h:outputLabel id="label_health_insurance_provider_name" for="health_insurance_provider_name" value="Insurance provider:"></h:outputLabel>
+				<h:inputText id="health_insurance_provider_name" value="#{mpb_registrationOtherContacts.healthInsuranceProvider}"></h:inputText>
+				<h:outputLabel id="label_health_insurance_policy_number" for="health_insurance_policy_number" value="Policy number:"></h:outputLabel>
+				<h:inputText id="health_insurance_policy_number" value="#{mpb_registrationOtherContacts.healthInsurancePolicyNumber}"></h:inputText>
+			</h:panelGroup>
+			<h:panelGroup id="command_block_other_contact_page">
+				<h:commandButton id="navigate_to_agreement_button" value="Next" action="/student/RegistrationFinalAgreement"></h:commandButton>
+			</h:panelGroup>
+		</h:panelGroup>
+	</h:form>
+</h:body>
+</html>
