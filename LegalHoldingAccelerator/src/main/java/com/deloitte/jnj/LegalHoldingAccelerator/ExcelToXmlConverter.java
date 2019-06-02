@@ -33,11 +33,6 @@ public class ExcelToXmlConverter {
 	private ZipUtility zipUtility = new ZipUtility();
 
 	public void process() {
-		// TODO System prompt to enter source excel file name
-		// TODO System reads the excel file in Documents\workbench folder
-		// TODO System generates the output xml file without timestamp and zips
-		// it in a folder with timestamp. Then puts it in destination folder
-		// TODO System displays message with output zip file path
 		System.out.println(
 				"------------------------------------------\nExcel to XML Converter\n------------------------------------------");
 		BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
@@ -72,7 +67,7 @@ public class ExcelToXmlConverter {
 				Iterator<Cell> cellIterator = currentRow.iterator();
 				while (cellIterator.hasNext()) {
 					Cell currentCell = cellIterator.next();
-					//currentCell.setCellType(CellType.STRING);
+					// currentCell.setCellType(CellType.STRING);
 					row.add(currentCell.getStringCellValue());
 				}
 				excelGrid.add(row);
