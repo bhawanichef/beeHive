@@ -79,19 +79,4 @@ public class ZipUtility {
 		return unzippedPath;
 	}
 
-	public static void main(String[] args) {
-		/*
-		 * Path source = Paths.get(
-		 * "C:\\Users\\bhapanda\\Documents\\jnj_source\\MT_PATENT_CONFLICT_FULL_.zip"
-		 * ); Path target =
-		 * Paths.get("C:\\Users\\bhapanda\\Documents\\jnj_intermediate"); String
-		 * unzip = new ZipUtility().unzip(source, target);
-		 * System.out.println(unzip);
-		 */
-
-		Path source = Paths.get("C:\\Users\\bhapanda\\Documents\\jnj_intermediate\\MT_PATENT_CONFLICT_FULL_.xlsx");
-		Path target = Paths.get("C:\\Users\\bhapanda\\Desktop\\out.zip");
-		String zip = new ZipUtility().zip(source, target);
-		System.out.println(zip);
-	}
 }

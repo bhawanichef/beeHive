@@ -11,7 +11,4 @@ public class StandardUtility {
 				+ formatter.format(now.getHour()) + formatter.format(now.getMinute()) + formatter.format(now.getSecond());
 	}
 
-	public static void main(String[] args) {
-		System.out.println(getTimeStamp());
-	}
 }
