@@ -47,7 +47,9 @@ class MySaxHandler extends DefaultHandler {
 
 	@Override
 	public void startElement(String uri, String localName, String qName, Attributes attributes) throws SAXException {
-		if (qName.equalsIgnoreCase("data")) {
+		if (qName.equalsIgnoreCase("table")) {
+			// Do nothing
+		} else if (qName.equalsIgnoreCase("data")) {
 			row = new HashMap<>();
 			if (null == rowList) {
 				rowList = new ArrayList<>();
@@ -61,7 +63,9 @@ class MySaxHandler extends DefaultHandler {
 
 	@Override
 	public void endElement(String uri, String localName, String qName) throws SAXException {
-		if (isValue) {
+		if (qName.equalsIgnoreCase("table")) {
+			// Do nothing
+		} else if (isValue) {
 			row.put(qName, value.toString());
 			isValue = false;
 		} else {
